@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the article and the dataset."
+title: "cof-co2-ml-dft: ML-accelerated screening of covalent organic frameworks for CO2/N2 selectivity"
+authors:
+  - family-names: Khanal
+    given-names: Pratik
+    affiliation: "Crimson College of Technology, Butwal, Nepal"
+  - family-names: Khanal
+    given-names: Amrit
+    affiliation: "Kathmandu Multiple College, Kathmandu, Nepal"
+license: MIT
+version: 1.0.0
+date-released: 2026-10-19
+references:
+  - type: dataset
+    title: "Dataset for 'Machine-learning-accelerated screening of experimentally reported covalent organic frameworks for selective CO2 capture'"
+    authors:
+      - family-names: Khanal
+        given-names: Pratik
+      - family-names: Khanal
+        given-names: Amrit
+    doi: 10.5281/zenodo.23463092
+    publisher:
+      name: Zenodo
