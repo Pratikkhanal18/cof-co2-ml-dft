@@ -11,7 +11,7 @@ The repository contains all scripts for the workflow:
 - random-forest, MLP and SchNet models;
 - figure and manuscript generation.
 
-**Data:** all results, charged structures and raw simulation outputs are on Zenodo: [10.5281/zenodo.23463092](https://doi.org/10.5281/zenodo.23463092).
+**Data:** all results, charged structures and raw simulation outputs are on Zenodo: version 2.0 [10.5281/zenodo.23832533](https://doi.org/10.5281/zenodo.23832533) (all versions: [10.5281/zenodo.23463091](https://doi.org/10.5281/zenodo.23463091)).
 
 ## Repository layout
 
@@ -31,6 +31,24 @@ The repository contains all scripts for the workflow:
 | `eqeq/`, `zeo/` | Batch scripts for EQeq charges and Zeo++ geometry |
 | `dft/` | D3(BJ) implementation (`d3bj.py` plus reference data), cluster cutting, DFT pipelines and cluster geometries |
 | `manuscript/` | Builds the manuscript `.docx` from the result files (`build_manuscript.py` → `render.js`) |
+
+## Revision analyses (peer review, 2026)
+
+| Path | Contents |
+|---|---|
+| `raspa/sens_job.py`, `raspa/run_sens.sh`, `raspa/ff_uff/` | 30,000-cycle Widom refinement of the top 50 frameworks; UFF and ±20% charge sensitivity variants for the top 20 |
+| `sens_analysis.py` | Refinement statistics, sensitivity summary and bootstrap ranking stability (`results/sensitivity.json`, `results/ranking_stability.csv`) |
+| `ml_ablation.py` | Random forest with geometric-only and chemical-only descriptors, learning curve (`results/ml_ablation.json`) |
+| `fig_workflow.py` | Workflow diagram (Fig. 1 of the revised manuscript) |
+| `manuscript/make_build.py`, `refs_rev.py`, `highlight.py`, `build_response.py`, `make_si.py` | Revised manuscript, highlighted-changes version, response letter and supplementary tables |
+
+```bash
+# queue: "<id> <variant> <cycles>" per line, variants base | uff | q08 | q12
+cat raspa/sens/queue.txt | xargs -P2 -L1 bash raspa/run_sens.sh
+python sens_analysis.py && python ml_ablation.py && python fig_workflow.py
+```
+
+The raw outputs of these runs are in folder `09_revision/` of version 2.0 of the Zenodo record (https://doi.org/10.5281/zenodo.23832533).
 
 ## Requirements
 
@@ -78,7 +96,7 @@ To skip the simulations, download the processed results from Zenodo and unpack t
 
 Please cite the article and the dataset (see `CITATION.cff`):
 
-> Khanal, P. & Khanal, A. Dataset for "Machine-learning-accelerated screening of experimentally reported covalent organic frameworks for selective CO2 capture". Zenodo (2026). https://doi.org/10.5281/zenodo.23463092
+> Khanal, P. & Khanal, A. Dataset for "Machine-learning-accelerated screening of experimentally reported covalent organic frameworks for selective CO2 capture". Version 2.0. Zenodo (2026). https://doi.org/10.5281/zenodo.23832533
 
 Please also cite the CURATED-COFs database (Ongari et al., *ACS Cent. Sci.* 2019, 5, 1663; 2020, 6, 1890), RASPA, Zeo++, EQeq and PySCF.
 
