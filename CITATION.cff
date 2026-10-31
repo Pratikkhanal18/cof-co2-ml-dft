@@ -9,8 +9,8 @@ authors:
     given-names: Amrit
     affiliation: "Kathmandu Multiple College, Kathmandu, Nepal"
 license: MIT
-version: 1.0.0
-date-released: 2026-10-19
+version: 1.1.0
+date-released: 2026-10-31
 references:
   - type: dataset
     title: "Dataset for 'Machine-learning-accelerated screening of experimentally reported covalent organic frameworks for selective CO2 capture'"
@@ -19,6 +19,7 @@ references:
         given-names: Pratik
       - family-names: Khanal
         given-names: Amrit
-    doi: 10.5281/zenodo.23463092
+    doi: 10.5281/zenodo.23832533
+    version: "2.0"
     publisher:
       name: Zenodo
