@@ -1,0 +1,35 @@
+# general rule for shifted vs truncated
+shifted
+# general rule tailcorrections
+no
+# number of defined interactions
+26
+# type interaction, parameters
+H_fw   lennard-jones 22.1400 2.57100
+B_fw   lennard-jones 90.5800 3.63800
+C_fw   lennard-jones 52.8400 3.43100
+N_fw   lennard-jones 34.7200 3.26100
+O_fw   lennard-jones 30.1900 3.11800
+F_fw   lennard-jones 25.1600 2.99700
+P_fw   lennard-jones 153.5000 3.69500
+S_fw   lennard-jones 137.9000 3.59500
+Cl_fw   lennard-jones 114.2000 3.51600
+Br_fw   lennard-jones 125.7000 3.73200
+Si_fw   lennard-jones 202.3000 3.82600
+I_fw   lennard-jones 170.6000 4.00900
+Li_fw   lennard-jones 12.5800 2.18359
+Na_fw   lennard-jones 15.1000 2.65755
+Hg_fw   lennard-jones 193.7400 2.14617
+Zn_fw   lennard-jones 62.3992 2.46155
+Fe_fw   lennard-jones 6.5419 2.59430
+Cu_fw   lennard-jones 2.5161 3.11369
+Co_fw   lennard-jones 7.0451 2.55866
+Ti_fw   lennard-jones 8.5547 2.82860
+V_fw   lennard-jones 8.0515 2.80099
+Ni_fw   lennard-jones 7.5483 2.52481
+Sb_fw   lennard-jones 225.9460 3.93777
+C_co2  lennard-jones 27.0 2.80
+O_co2  lennard-jones 79.0 3.05
+N_n2   lennard-jones 36.0 3.31
+# general mixing rule for Lennard-Jones
+Lorentz-Berthelot
